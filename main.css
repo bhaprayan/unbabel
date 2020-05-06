@@ -1,0 +1,47 @@
+body {
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
+.viewport {
+  border-radius: 25px;
+  border: 2px solid #383d41;
+  padding: 20px;
+  width: 220px;
+  height: 320px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.viewport-label {
+  margin-top: 5em;
+}
+
+.viewport-source {
+  padding-left: 2em;
+  margin-top: 2em;
+  padding-right: 2em;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  color: #383d41;
+  text-decoration: underline;
+}
+
+.links {
+  margin-top: 2em;
+}
+
+.arch-row {
+  margin-top: 1em;
+}
+
+img {
+  overflow: hidden;
+  max-height: 80vh;
+}

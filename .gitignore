@@ -5,3 +5,4 @@ e2e/nyt-comments
 e2e/runs
 .ipynb_checkpoints/
 tags*
+node_modules/
