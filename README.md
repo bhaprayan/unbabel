@@ -20,3 +20,15 @@ Our work consists of the following contributions:
 # Architecture Diagram
 
 ![unbabel model architecture diagram](public/accent_model_arch.png)
+
+# Caveat
+
+This is highly experimental, and a WIP. We saw inital promising results for certain transferred utterances, but a thorough analysis remains far from complete. Feel free to fork + play around with the code :)
+
+# Contributors
+
+(equal contribution. sorted in alphabetical order.)
+
+* Shuby Deshpande
+* Victoria Lin
+* Mantek Singh
