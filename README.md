@@ -18,3 +18,5 @@ Our work consists of the following contributions:
 * A custom designed network architecture that takes as input a spoken utterance in American or British English and produces audio of the same utterance spoken in the target accent.
 
 # Architecture Diagram
+
+![unbabel model architecture diagram](public/accent_model_arch.png)
