@@ -46,44 +46,25 @@ class ATModel(nn.Module):
         self.bn_dc2 = nn.BatchNorm2d(1)
 
     def forward(self, x):
-        #         print('input:', x.shape)
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
 
-        #         print('conv1:', x.shape)
         x = self.conv2(x)
         x = self.bn2(x)
         x = self.relu(x)
 
-        #         print('conv2:', x.shape)
-
         x = self.maxpool(x)
 
-        #         print('maxpool:', x.shape)
         x = torch.flatten(x, 1)
         x = self.conv_fc(x)
-        #         print('conv_fc:', x.shape)
         x = x.view(self.batch_size, self.seq_len, self.features)
-        #         print('x_view:', x.shape)
         x, (h_n, c_n) = self.lstm(x)
-        #         print('lstm:', x.shape)
-        #         x = x.reshape(self.batch_size, 1, 32, 32)
         x = x.reshape(self.batch_size, self.embedding_size * 2)
 
-        #         x = self.deconv1(x)
-        #         x = self.bn_dc1(x)
-        #         x = self.relu(x)
-        #         print('deconv1:', x.shape)
-
-        #         x = self.deconv2(x)
-        #         x = self.bn_dc2(x)
-        #         x = self.relu(x)
-        #         print('deconv2:', x.shape)
         x = self.lstm_fc1(x)
         x = self.relu(x)
 
         x = self.lstm_fc2(x)
         x = self.relu(x)
-        #         print('lstm_fc:', x.shape)
         return x
