@@ -41,6 +41,11 @@ a {
   margin-top: 1em;
 }
 
+.sg {
+  width: 220px;
+  height: 220px;
+}
+
 img {
   overflow: hidden;
   max-height: 80vh;
